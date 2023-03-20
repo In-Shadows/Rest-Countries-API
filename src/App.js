@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "./styles/_base.scss";
+import { RootLayout, HomePage, CountryDetailsPage, ErrorPage } from "./pages";
+
+const loadCountries = async function () {
+  const response = await fetch("/data.json");
+  if (!response.ok) {
+    throw new Error("Something went wrong!");
+  }
+  const data = await response.json();
+  return data;
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    id: "countries",
+    loader: loadCountries,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: ":country",
+        element: <CountryDetailsPage />,
+      },
+    ],
+  },
+]);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;

@@ -1,0 +1,14 @@
+@import "../styles/variables";
+
+.countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8rem;
+  padding: 0 3rem;
+  padding-bottom: 5rem;
+
+  // @media only screen and (max-width: $bp-small) {
+  //   column-gap: 4rem;
+  // }
+}

@@ -1,0 +1,133 @@
+@import "../styles/variables";
+
+.country-description {
+  padding: 6rem 3rem 0;
+  background-color: var(--color-background);
+
+  &__btn-con {
+    margin-bottom: 6rem;
+
+    .btn {
+      padding: 1rem 3rem;
+      width: 14rem;
+    }
+  }
+
+  &__con {
+    display: flex;
+    gap: 9.5rem;
+    height: 38rem;
+
+    @media only screen and (max-width: $bp-large) {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      height: 100%;
+    }
+  }
+
+  &__flag {
+    flex: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__details-con {
+    flex: 1;
+    padding: 4rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media only screen and (max-width: $bp-large) {
+      align-self: center;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      align-self: flex-start;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 3rem;
+  }
+
+  &__details {
+    color: var(--color-text);
+    font-weight: 600;
+    height: 55%;
+    margin-bottom: 4rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    column-gap: 9.5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      column-gap: 6rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      height: 20rem;
+      margin-bottom: 6rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 100%;
+    }
+
+    p:nth-child(5) {
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  &__border {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    &-text {
+      color: var(--color-text);
+      font-weight: 600;
+      margin-right: 2rem;
+    }
+
+    &-c {
+      flex: 1;
+      font-size: 1.4rem;
+      color: var(--color-text);
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 1fr;
+      gap: 1rem;
+    }
+
+    &-c > * {
+      width: 12rem;
+      padding: 0.8rem;
+      text-align: center;
+    }
+  }
+}

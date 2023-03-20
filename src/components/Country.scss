@@ -1,0 +1,57 @@
+@import "../styles/variables";
+
+.country {
+  background-color: var(--color-elements);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 5px;
+  width: 26rem;
+  height: 38rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+
+  @media only screen and (max-width: $bp-small) {
+    flex: 0 1 30rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__img {
+    height: 45%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    padding: 3rem 2.5rem 4rem;
+
+    .tertiary-heading {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__details {
+    color: var(--color-text);
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    span {
+      font-weight: 300;
+    }
+  }
+}

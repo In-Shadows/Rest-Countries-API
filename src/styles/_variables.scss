@@ -1,0 +1,18 @@
+:root {
+  --color-background: #fafafa; //#202c37
+  --color-elements: #fff; //#2b3945
+  --color-text: #111517; //#fff
+  --color-input: #858585;
+}
+
+:root:has(.header__dark-mode input:checked) {
+  --color-background: #202c37;
+  --color-elements: #2b3945;
+  --color-text: #fff;
+  --color-input: #fff;
+}
+
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 37.5em; // 600px
+$bp-small: 31.25em; // 500px

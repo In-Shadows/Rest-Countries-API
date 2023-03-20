@@ -1,0 +1,32 @@
+@import "../styles/generalStyles";
+@import "../styles/variables";
+
+.header {
+  padding: 4rem 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-con {
+    position: relative;
+    background-color: var(--color-elements);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  &__dark-mode {
+    input {
+      display: none;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      color: var(--color-text);
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
