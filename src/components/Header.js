@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoMoonOutline } from "react-icons/io5";
 
-import classes from "./Header.scss";
+import "./Header.scss";
 
 const Header = () => {
   let styles;
