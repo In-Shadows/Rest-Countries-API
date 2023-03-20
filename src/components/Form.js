@@ -1,7 +1,7 @@
 import React, { useState, useContext, useRef } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { useRouteLoaderData } from "react-router-dom";
+import { useNavigate, useRouteLoaderData } from "react-router-dom";
 
 import RegionContext from "../store/region-context";
 
@@ -23,7 +23,7 @@ const formatString = (str) => {
 };
 
 const Form = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const formRef = useRef();
   const [inputCountry, setInputCountry] = useState("");
   const [dropdownState, setdropdownState] = useState(false);
@@ -71,7 +71,7 @@ const Form = () => {
 
     setError(false);
     ctx.changeInput(country);
-    // navigate(`/${country.alpha3Code}`);
+    navigate(`/${country.alpha3Code}`);
   };
 
   const selectContainerClickHandler = () => {
