@@ -10,7 +10,7 @@ const Countries = () => {
   const ctx = useContext(RegionContext);
 
   const scrollToElement = (el) => {
-    el.scrollIntoView();
+    el.scrollIntoView(true);
     ctx.changeInput("");
   };
 
