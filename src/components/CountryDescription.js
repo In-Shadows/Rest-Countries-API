@@ -81,13 +81,17 @@ const CountryDescription = () => {
                 Sub Region: <span>{country.subregion}</span>
               </p>
               <p>
-                Capital: <span>{country.capital}</span>
+                Capital:{" "}
+                <span>{country?.capital ? country.capital : "None"}</span>
               </p>
               <p>
                 Top Level Domain: <span>{country.topLevelDomain[0]}</span>
               </p>
               <p>
-                Currencies: <span>{country.currencies[0].name}</span>
+                Currencies:{" "}
+                <span>
+                  {country?.currencies ? country.currencies[0].name : "None"}
+                </span>
               </p>
               <p>
                 Languages: <span>{languages}</span>

@@ -16,6 +16,7 @@ const Countries = () => {
     // });
     // ctx.changeInput("");
   };
+  console.log(data);
 
   const displayCountries =
     ctx.region === "All Countries"
@@ -32,7 +33,7 @@ const Countries = () => {
           name={country.name}
           population={country.population}
           region={country.region}
-          capital={country.capital}
+          capital={country?.capital ? country.capital : "None"}
           alpha2Code={country.alpha2Code}
           scroll={scrollToElement}
         />

@@ -1,8 +1,11 @@
 @import "../styles/variables";
 
 .country-description {
-  padding: 6rem 3rem 0;
   background-color: var(--color-background);
+
+  .container {
+    padding: 6rem 3rem 0;
+  }
 
   &__btn-con {
     margin-bottom: 6rem;

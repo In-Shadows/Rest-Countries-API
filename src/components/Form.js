@@ -122,7 +122,8 @@ const Form = () => {
             value="All Countries"
             id="All-Countries"
             name="region"
-            checked={ctx.region === "All Countries" ? true : false}
+            defaultChecked={ctx.region === "All Countries" ? true : false}
+            // checked={ctx.region === "All Countries" ? true : false}
             readOnly
           />
           <label htmlFor="All-Countries">All Countries</label>
@@ -133,7 +134,7 @@ const Form = () => {
             value="Africa"
             id="Africa"
             name="region"
-            checked={ctx.region === "All Countries" ? false : true}
+            // checked={ctx.region === "All Countries" ? false : true}
             readOnly
           />
           <label htmlFor="Africa">Africa</label>
@@ -144,7 +145,7 @@ const Form = () => {
             value="Americas"
             id="Americas"
             name="region"
-            checked={ctx.region === "All Countries" ? false : true}
+            // checked={ctx.region === "All Countries" ? false : true}
             readOnly
           />
           <label htmlFor="Americas">Americas</label>
@@ -155,7 +156,7 @@ const Form = () => {
             value="Asia"
             id="Asia"
             name="region"
-            checked={ctx.region === "All Countries" ? false : true}
+            // checked={ctx.region === "All Countries" ? false : true}
             readOnly
           />
           <label htmlFor="Asia">Asia</label>
@@ -166,7 +167,7 @@ const Form = () => {
             value="Europe"
             id="Europe"
             name="region"
-            checked={ctx.region === "All Countries" ? false : true}
+            // checked={ctx.region === "All Countries" ? false : true}
             readOnly
           />
           <label htmlFor="Europe">Europe</label>
@@ -177,10 +178,43 @@ const Form = () => {
             value="Oceania"
             id="Oceania"
             name="region"
-            checked={ctx.region === "All Countries" ? false : true}
+            // checked={ctx.region === "All Countries" ? false : true}
             readOnly
           />
           <label htmlFor="Oceania">Oceania</label>
+        </div>
+        <div className="form__radio">
+          <input
+            type="radio"
+            value="Antarctic"
+            id="Antarctic"
+            name="region"
+            // checked={ctx.region === "All Countries" ? false : true}
+            readOnly
+          />
+          <label htmlFor="Antarctic">Antarctic</label>
+        </div>
+        <div className="form__radio">
+          <input
+            type="radio"
+            value="Antarctic Ocean"
+            id="Antarctic Ocean"
+            name="region"
+            // checked={ctx.region === "All Countries" ? false : true}
+            readOnly
+          />
+          <label htmlFor="Antarctic Ocean">Antarctic Ocean</label>
+        </div>
+        <div className="form__radio">
+          <input
+            type="radio"
+            value="Polar"
+            id="Polar"
+            name="region"
+            // checked={ctx.region === "All Countries" ? false : true}
+            readOnly
+          />
+          <label htmlFor="Polar">Polar</label>
         </div>
       </div>
     </form>
