@@ -11,8 +11,8 @@
   transition: all 0.3s;
   text-decoration: none;
 
-  @media only screen and (max-width: $bp-small) {
-    flex: 0 1 30rem;
+  @media only screen and (max-width: $bp-medium) {
+    width: 90%;
   }
 
   &:focus {

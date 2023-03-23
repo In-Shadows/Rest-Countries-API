@@ -10,13 +10,12 @@ const Countries = () => {
   const ctx = useContext(RegionContext);
 
   const scrollToElement = (el) => {
-    // el.scrollIntoView({
-    //   block: "center",
-    //   behaviour: "smooth",
-    // });
-    // ctx.changeInput("");
+    el.scrollIntoView({
+      block: "center",
+      behaviour: "smooth",
+    });
+    ctx.changeInput("");
   };
-  console.log(data);
 
   const displayCountries =
     ctx.region === "All Countries"

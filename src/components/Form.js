@@ -1,7 +1,7 @@
 import React, { useState, useContext, useRef } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { useNavigate, useRouteLoaderData } from "react-router-dom";
+import { useRouteLoaderData } from "react-router-dom";
 
 import RegionContext from "../store/region-context";
 
@@ -23,7 +23,7 @@ const formatString = (str) => {
 };
 
 const Form = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const formRef = useRef();
   const [inputCountry, setInputCountry] = useState("");
   const [dropdownState, setdropdownState] = useState(false);
@@ -71,7 +71,7 @@ const Form = () => {
 
     setError(false);
     ctx.changeInput(country);
-    navigate(`/${country.alpha3Code}`);
+    // navigate(`/${country.alpha3Code}`);
   };
 
   const selectContainerClickHandler = () => {
@@ -122,8 +122,7 @@ const Form = () => {
             value="All Countries"
             id="All-Countries"
             name="region"
-            defaultChecked={ctx.region === "All Countries" ? true : false}
-            // checked={ctx.region === "All Countries" ? true : false}
+            checked={ctx.region === "All Countries" ? true : false}
             readOnly
           />
           <label htmlFor="All-Countries">All Countries</label>
@@ -134,7 +133,7 @@ const Form = () => {
             value="Africa"
             id="Africa"
             name="region"
-            // checked={ctx.region === "All Countries" ? false : true}
+            checked={ctx.region === "Africa" ? true : false}
             readOnly
           />
           <label htmlFor="Africa">Africa</label>
@@ -145,7 +144,7 @@ const Form = () => {
             value="Americas"
             id="Americas"
             name="region"
-            // checked={ctx.region === "All Countries" ? false : true}
+            checked={ctx.region === "Americas" ? true : false}
             readOnly
           />
           <label htmlFor="Americas">Americas</label>
@@ -156,7 +155,7 @@ const Form = () => {
             value="Asia"
             id="Asia"
             name="region"
-            // checked={ctx.region === "All Countries" ? false : true}
+            checked={ctx.region === "Asia" ? true : false}
             readOnly
           />
           <label htmlFor="Asia">Asia</label>
@@ -167,7 +166,7 @@ const Form = () => {
             value="Europe"
             id="Europe"
             name="region"
-            // checked={ctx.region === "All Countries" ? false : true}
+            checked={ctx.region === "Europe" ? true : false}
             readOnly
           />
           <label htmlFor="Europe">Europe</label>
@@ -178,7 +177,7 @@ const Form = () => {
             value="Oceania"
             id="Oceania"
             name="region"
-            // checked={ctx.region === "All Countries" ? false : true}
+            checked={ctx.region === "Oceania" ? true : false}
             readOnly
           />
           <label htmlFor="Oceania">Oceania</label>
@@ -189,7 +188,7 @@ const Form = () => {
             value="Antarctic"
             id="Antarctic"
             name="region"
-            // checked={ctx.region === "All Countries" ? false : true}
+            checked={ctx.region === "Antarctic" ? true : false}
             readOnly
           />
           <label htmlFor="Antarctic">Antarctic</label>
@@ -200,7 +199,7 @@ const Form = () => {
             value="Antarctic Ocean"
             id="Antarctic Ocean"
             name="region"
-            // checked={ctx.region === "All Countries" ? false : true}
+            checked={ctx.region === "Antarctic Ocean" ? true : false}
             readOnly
           />
           <label htmlFor="Antarctic Ocean">Antarctic Ocean</label>
@@ -211,7 +210,7 @@ const Form = () => {
             value="Polar"
             id="Polar"
             name="region"
-            // checked={ctx.region === "All Countries" ? false : true}
+            checked={ctx.region === "Polar" ? true : false}
             readOnly
           />
           <label htmlFor="Polar">Polar</label>
